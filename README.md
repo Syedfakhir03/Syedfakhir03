@@ -1,25 +1,25 @@
 <div align="center">
 
-# Syed Fakhar Un Nabi
+<h3><code>syed@github ~ $ ./contributions.sh</code></h3>
 
-### Data Science • Machine Learning • AI • Analytics
+<img src="./contrib-heatmap.svg" width="860" alt="Syed Fakhar contribution heatmap" />
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Syed%20Fakhir-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/syed-fakhir/)
-[![GitHub](https://img.shields.io/badge/GitHub-Syedfakhir03-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Syedfakhir03)
+<br><br>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&center=true&vCenter=true&width=820&lines=Data+Science+%7C+Machine+Learning+%7C+AI;Python+%7C+SQL+%7C+BigQuery+%7C+Business+Intelligence;NLP+%7C+Deep+Learning+%7C+Reinforcement+Learning;Building+practical+data-driven+systems)](https://git.io/typing-svg)
+<h3><code>syed@github ~ $ whoami</code></h3>
+
+<table>
+<tr>
+<td valign="top">
+  <img src="./ascii-portrait.svg" width="370" alt="ASCII portrait of Syed Fakhar" />
+</td>
+<td valign="top">
+  <img src="./info-card.svg" width="490" alt="Syed Fakhar profile information" />
+</td>
+</tr>
+</table>
 
 </div>
-
----
-
-## 👋 About Me
-
-I'm a final-year **Bachelor of Computer Science (Data Science)** student at **Monash University**, focused on building practical machine-learning, analytics and AI systems.
-
-I have professional experience in enterprise analytics through my internship at **Kasatria Technologies**, where I worked with **GA4, BigQuery, Looker Studio, anomaly detection, MCMC and Marketing Mix Modeling**.
-
-My project work spans **predictive modelling, NLP, BERT, reinforcement learning, clustering, business intelligence, ETL and responsible generative AI**.
 
 ---
 
@@ -133,8 +133,6 @@ Analyzed bias in diffusion-based image editing with **InstructPix2Pix**, perform
 **Monash University — Kuala Lumpur, Malaysia**  
 **Expected Nov 2026 • GPA: 3.48 / 4.00**
 
-Relevant coursework includes:
-
 `Data Structures & Algorithms` `Databases` `Data Analysis` `Data Visualization` `Deep Learning` `Artificial Intelligence` `Probability & Statistics` `Object-Oriented Programming`
 
 ---
@@ -149,20 +147,13 @@ Managed venue bookings, budgeting and committee coordination to improve member e
 
 ## 🎯 Current Focus
 
-- Machine Learning & AI systems
-- NLP and Deep Learning
-- Reinforcement Learning
-- MLOps and production ML
-- Data Engineering & Analytics
-- Responsible and Explainable AI
+`Machine Learning` `NLP` `Deep Learning` `Reinforcement Learning` `MLOps` `Data Engineering` `Responsible AI`
 
 ---
 
 <div align="center">
 
-### Let's Connect
-
-I'm interested in opportunities and collaborations across **Data Science, Machine Learning, AI and Analytics**.
+### `syed@github ~ $ ./links.sh`
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Syed%20Fakhir-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/syed-fakhir/)
 [![GitHub](https://img.shields.io/badge/GitHub-Syedfakhir03-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Syedfakhir03)

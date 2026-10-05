@@ -1,111 +1,363 @@
 #!/usr/bin/env python3
-"""Hand-author the neofetch-style info card SVG.
+"""Generate a neofetch-style animated GitHub profile info card.
 
-Each line fades and slides in on a short stagger (CSS keyframes inside
-the SVG — GitHub plays them). STATIC=1 emits a frozen frame for Quick Look.
+Each line fades and slides in with a short stagger using CSS keyframes.
+STATIC=1 emits a frozen frame.
 
-Usage: python scripts/make_info_card.py
-Writes info-card.svg.
+Usage:
+    python scripts/make_info_card.py
+
+Writes:
+    info-card.svg
 """
+
 import html
 import os
 
+
+# ─────────────────────────────────────────────
+# COLORS
+# ─────────────────────────────────────────────
+
 BG = "#0d1117"
 BORDER = "#30363d"
-KEY = "#39d353"  # green keys, GitHub-contribution green
-VAL = "#c9d1d9"
-DIM = "#8b949e"
-ACCENT = "#58a6ff"
 
-W = 560
+KEY = "#39d353"       # GitHub contribution green
+VAL = "#c9d1d9"       # main text
+DIM = "#8b949e"       # secondary text
+ACCENT = "#58a6ff"    # GitHub blue
+
+
+# ─────────────────────────────────────────────
+# CARD SETTINGS
+# ─────────────────────────────────────────────
+
+W = 720
 LINE_H = 27
 STAGGER = 0.28
 
-TITLE = "you@github"
+TITLE = "syed@github"
+
+
+# ─────────────────────────────────────────────
+# PROFILE INFORMATION
+# ─────────────────────────────────────────────
+
 ROWS = [
+
     ("", ""),
-    ("Name", "Your Name"),
-    ("Location", "Your City"),
-    ("Role", "What you do"),
+
+    ("Name", "Syed Fakhar Un Nabi"),
+
+    ("Role", "Data Science • Machine Learning • AI"),
+
+    ("Education", "Monash University — Computer Science (Data Science)"),
+
+    ("GPA", "3.48 / 4.00"),
+
     ("", ""),
-    ("Built", "Your best project, one line"),
-    ("Also", "Other things you make"),
+
+    ("Experience", "Data Science Intern — Kasatria Technologies"),
+
+    ("Built", "BERT NLP • ML Agents • RL • Predictive Models"),
+
+    ("Projects", "Churn • Analytics • Responsible AI • BI Pipelines"),
+
     ("", ""),
-    ("Stack", "Your tools"),
-    ("Focus", "What drives you"),
+
+    ("Languages", "Python • R • SQL"),
+
+    ("ML / AI", "TensorFlow • PyTorch • Scikit-learn • BERT"),
+
+    ("Data", "BigQuery • Power BI • Looker Studio • GA4"),
+
+    ("Focus", "NLP • Deep Learning • Reinforcement Learning • MLOps"),
+
     ("", ""),
-    ("Contact", "you@example.com"),
+
+    ("GitHub", "@Syedfakhir03"),
+
+    ("LinkedIn", "linkedin.com/in/syed-fakhir"),
+
 ]
-PALETTE = ["#ff7b72", "#ffa657", "#d29922", "#39d353", "#58a6ff", "#bc8cff", "#f778ba", "#c9d1d9"]
+
+
+# Neofetch-style palette
+PALETTE = [
+    "#ff7b72",
+    "#ffa657",
+    "#d29922",
+    "#39d353",
+    "#58a6ff",
+    "#bc8cff",
+    "#f778ba",
+    "#c9d1d9",
+]
 
 
 def main() -> None:
+
     static = os.environ.get("STATIC") == "1"
-    # dynamic height: header block + rows (blank rows are shorter) + palette
-    blanks = sum(1 for k, v in ROWS if not k and not v)
-    lines = len(ROWS) - blanks
-    H = round(106 + blanks * LINE_H * 0.45 + lines * LINE_H + 6 + 16 + 24)
-    anim_css = "" if static else (
-        ".ln{opacity:0;transform:translateX(-8px);"
-        "animation:in .45s ease-out forwards}"
-        "@keyframes in{to{opacity:1;transform:none}}"
+
+    # Calculate dynamic height
+    blanks = sum(
+        1 for key, value in ROWS
+        if not key and not value
     )
 
+    lines = len(ROWS) - blanks
+
+    H = round(
+        106
+        + blanks * LINE_H * 0.45
+        + lines * LINE_H
+        + 6
+        + 16
+        + 24
+    )
+
+
+    # ─────────────────────────────────────────
+    # ANIMATION
+    # ─────────────────────────────────────────
+
+    anim_css = "" if static else (
+
+        ".ln{"
+        "opacity:0;"
+        "transform:translateX(-12px);"
+        "animation:in .45s ease-out forwards"
+        "}"
+
+        "@keyframes in{"
+        "to{"
+        "opacity:1;"
+        "transform:none"
+        "}"
+        "}"
+
+    )
+
+
+    # ─────────────────────────────────────────
+    # SVG START
+    # ─────────────────────────────────────────
+
     parts = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
-        f'font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14">',
+
+        f'<svg xmlns="http://www.w3.org/2000/svg" '
+        f'width="{W}" '
+        f'height="{H}" '
+        f'viewBox="0 0 {W} {H}" '
+        f'font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" '
+        f'font-size="14">',
+
         f"<style>{anim_css}</style>",
-        f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="8" fill="{BG}" stroke="{BORDER}"/>',
-        # title bar
+
+        # Background
+        f'<rect '
+        f'x="0.5" '
+        f'y="0.5" '
+        f'width="{W - 1}" '
+        f'height="{H - 1}" '
+        f'rx="8" '
+        f'fill="{BG}" '
+        f'stroke="{BORDER}"/>',
+
+        # macOS / terminal dots
         f'<circle cx="22" cy="21" r="6" fill="#ff5f57"/>'
         f'<circle cx="42" cy="21" r="6" fill="#febc2e"/>'
         f'<circle cx="62" cy="21" r="6" fill="#28c840"/>',
-        f'<text x="{W / 2:.0f}" y="26" text-anchor="middle" fill="{DIM}">{TITLE}</text>',
-        f'<line x1="1" y1="40" x2="{W - 1}" y2="40" stroke="{BORDER}"/>',
+
+        # Window title
+        f'<text '
+        f'x="{W / 2:.0f}" '
+        f'y="26" '
+        f'text-anchor="middle" '
+        f'fill="{DIM}">'
+        f'{TITLE}'
+        f'</text>',
+
+        # divider
+        f'<line '
+        f'x1="1" '
+        f'y1="40" '
+        f'x2="{W - 1}" '
+        f'y2="40" '
+        f'stroke="{BORDER}"/>',
+
     ]
+
+
+    # ─────────────────────────────────────────
+    # HEADER
+    # ─────────────────────────────────────────
 
     y = 72
     delay = 0.15
+
     parts.append(
-        f'<g class="ln" style="animation-delay:{delay:.2f}s">'
-        f'<text x="24" y="{y}" fill="{ACCENT}">{TITLE}</text>'
-        f'<text x="24" y="{y + 16}" fill="{DIM}">{"-" * len(TITLE)}</text></g>'
+
+        f'<g class="ln" '
+        f'style="animation-delay:{delay:.2f}s">'
+
+        f'<text '
+        f'x="24" '
+        f'y="{y}" '
+        f'fill="{ACCENT}">'
+        f'{TITLE}'
+        f'</text>'
+
+        f'<text '
+        f'x="24" '
+        f'y="{y + 16}" '
+        f'fill="{DIM}">'
+        f'{"-" * len(TITLE)}'
+        f'</text>'
+
+        f'</g>'
+
     )
+
     y += 34
+
+
+    # ─────────────────────────────────────────
+    # PROFILE ROWS
+    # ─────────────────────────────────────────
+
     for key, val in ROWS:
+
         delay += STAGGER * 0.55
+
+        # blank spacer
         if not key and not val:
+
             y += LINE_H * 0.45
             continue
+
+
         if key:
+
             parts.append(
-                f'<g class="ln" style="animation-delay:{delay:.2f}s">'
-                f'<text x="24" y="{y}"><tspan fill="{KEY}">{html.escape(key)}</tspan>'
-                f'<tspan fill="{DIM}">: </tspan>'
-                f'<tspan x="130" fill="{VAL}">{html.escape(val)}</tspan></text></g>'
+
+                f'<g '
+                f'class="ln" '
+                f'style="animation-delay:{delay:.2f}s">'
+
+                f'<text '
+                f'x="24" '
+                f'y="{y}">'
+
+                f'<tspan '
+                f'fill="{KEY}">'
+                f'{html.escape(key)}'
+                f'</tspan>'
+
+                f'<tspan '
+                f'fill="{DIM}">'
+                f': '
+                f'</tspan>'
+
+                f'<tspan '
+                f'x="150" '
+                f'fill="{VAL}">'
+                f'{html.escape(val)}'
+                f'</tspan>'
+
+                f'</text>'
+
+                f'</g>'
+
             )
+
+
         else:
+
             parts.append(
-                f'<g class="ln" style="animation-delay:{delay:.2f}s">'
-                f'<text x="130" y="{y}" fill="{DIM}">{html.escape(val)}</text></g>'
+
+                f'<g '
+                f'class="ln" '
+                f'style="animation-delay:{delay:.2f}s">'
+
+                f'<text '
+                f'x="150" '
+                f'y="{y}" '
+                f'fill="{DIM}">'
+                f'{html.escape(val)}'
+                f'</text>'
+
+                f'</g>'
+
             )
+
+
         y += LINE_H
 
-    # classic neofetch palette blocks
-    delay += 0.3
+
+    # ─────────────────────────────────────────
+    # COLOR PALETTE
+    # ─────────────────────────────────────────
+
+    delay += 0.30
     y += 6
-    sw = 30
-    x0 = (W - sw * len(PALETTE)) / 2
+
+    sw = 34
+
+    x0 = (
+        W - sw * len(PALETTE)
+    ) / 2
+
+
     blocks = "".join(
-        f'<rect x="{x0 + i * sw:.0f}" y="{y}" width="{sw}" height="16" fill="{c}"/>'
-        for i, c in enumerate(PALETTE)
+
+        f'<rect '
+        f'x="{x0 + i * sw:.0f}" '
+        f'y="{y}" '
+        f'width="{sw}" '
+        f'height="16" '
+        f'fill="{color}"/>'
+
+        for i, color in enumerate(PALETTE)
+
     )
-    parts.append(f'<g class="ln" style="animation-delay:{delay:.2f}s">{blocks}</g>')
+
+
+    parts.append(
+
+        f'<g '
+        f'class="ln" '
+        f'style="animation-delay:{delay:.2f}s">'
+
+        f'{blocks}'
+
+        f'</g>'
+
+    )
+
+
+    # SVG END
     parts.append("</svg>")
 
-    with open("info-card.svg", "w") as f:
-        f.write("\n".join(parts))
-    print("wrote info-card.svg")
+
+    # ─────────────────────────────────────────
+    # WRITE FILE
+    # ─────────────────────────────────────────
+
+    with open(
+        "info-card.svg",
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+        f.write(
+            "\n".join(parts)
+        )
+
+
+    print(
+        "wrote info-card.svg"
+    )
 
 
 if __name__ == "__main__":

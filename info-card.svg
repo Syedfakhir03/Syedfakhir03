@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="552" viewBox="0 0 720 552" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14">
+<style>.ln{opacity:0;transform:translateX(-12px);animation:in .45s ease-out forwards}@keyframes in{to{opacity:1;transform:none}}</style>
+<rect x="0.5" y="0.5" width="719" height="551" rx="8" fill="#0d1117" stroke="#30363d"/>
+<circle cx="22" cy="21" r="6" fill="#ff5f57"/><circle cx="42" cy="21" r="6" fill="#febc2e"/><circle cx="62" cy="21" r="6" fill="#28c840"/>
+<text x="360" y="26" text-anchor="middle" fill="#8b949e">syed@github</text>
+<line x1="1" y1="40" x2="719" y2="40" stroke="#30363d"/>
+<g class="ln" style="animation-delay:0.15s"><text x="24" y="72" fill="#58a6ff">syed@github</text><text x="24" y="88" fill="#8b949e">-----------</text></g>
+<g class="ln" style="animation-delay:0.46s"><text x="24" y="118.15"><tspan fill="#39d353">Name</tspan><tspan fill="#8b949e">: </tspan><tspan x="150" fill="#c9d1d9">Syed Fakhar Un Nabi</tspan></text></g>
+<g class="ln" style="animation-delay:0.61s"><text x="24" y="145.15"><tspan fill="#39d353">Role</tspan><tspan fill="#8b949e">: </tspan><tspan x="150" fill="#c9d1d9">Data Science • Machine Learning • AI</tspan></text></g>
+<g class="ln" style="animation-delay:0.77s"><text x="24" y="172.15"><tspan fill="#39d353">Education</tspan><tspan fill="#8b949e">: </tspan><tspan x="150" fill="#c9d1d9">Monash University — Computer Science (Data Science)</tspan></text></g>
+<g class="ln" style="animation-delay:0.92s"><text x="24" y="199.15"><tspan fill="#39d353">GPA</tspan><tspan fill="#8b949e">: </tspan><tspan x="150" fill="#c9d1d9">3.48 / 4.00</tspan></text></g>
+<g class="ln" style="animation-delay:1.23s"><text x="24" y="238.3"><tspan fill="#39d353">Experience</tspan><tspan fill="#8b949e">: </tspan><tspan x="150" fill="#c9d1d9">Data Science Intern — Kasatria Technologies</tspan></text></g>
+<g class="ln" style="animation-delay:1.38s"><text x="24" y="265.3"><tspan fill="#39d353">Built</tspan><tspan fill="#8b949e">: </tspan><tspan x="150" fill="#c9d1d9">BERT NLP • ML Agents • RL • Predictive Models</tspan></text></g>
+<g class="ln" style="animation-delay:1.54s"><text x="24" y="292.3"><tspan fill="#39d353">Projects</tspan><tspan fill="#8b949e">: </tspan><tspan x="150" fill="#c9d1d9">Churn • Analytics • Responsible AI • BI Pipelines</tspan></text></g>
+<g class="ln" style="animation-delay:1.84s"><text x="24" y="331.45"><tspan fill="#39d353">Languages</tspan><tspan fill="#8b949e">: </tspan><tspan x="150" fill="#c9d1d9">Python • R • SQL</tspan></text></g>
+<g class="ln" style="animation-delay:2.00s"><text x="24" y="358.45"><tspan fill="#39d353">ML / AI</tspan><tspan fill="#8b949e">: </tspan><tspan x="150" fill="#c9d1d9">TensorFlow • PyTorch • Scikit-learn • BERT</tspan></text></g>
+<g class="ln" style="animation-delay:2.15s"><text x="24" y="385.45"><tspan fill="#39d353">Data</tspan><tspan fill="#8b949e">: </tspan><tspan x="150" fill="#c9d1d9">BigQuery • Power BI • Looker Studio • GA4</tspan></text></g>
+<g class="ln" style="animation-delay:2.31s"><text x="24" y="412.45"><tspan fill="#39d353">Focus</tspan><tspan fill="#8b949e">: </tspan><tspan x="150" fill="#c9d1d9">NLP • Deep Learning • Reinforcement Learning • MLOps</tspan></text></g>
+<g class="ln" style="animation-delay:2.61s"><text x="24" y="451.59999999999997"><tspan fill="#39d353">GitHub</tspan><tspan fill="#8b949e">: </tspan><tspan x="150" fill="#c9d1d9">@Syedfakhir03</tspan></text></g>
+<g class="ln" style="animation-delay:2.77s"><text x="24" y="478.59999999999997"><tspan fill="#39d353">LinkedIn</tspan><tspan fill="#8b949e">: </tspan><tspan x="150" fill="#c9d1d9">linkedin.com/in/syed-fakhir</tspan></text></g>
+<g class="ln" style="animation-delay:3.07s"><rect x="224" y="511.59999999999997" width="34" height="16" fill="#ff7b72"/><rect x="258" y="511.59999999999997" width="34" height="16" fill="#ffa657"/><rect x="292" y="511.59999999999997" width="34" height="16" fill="#d29922"/><rect x="326" y="511.59999999999997" width="34" height="16" fill="#39d353"/><rect x="360" y="511.59999999999997" width="34" height="16" fill="#58a6ff"/><rect x="394" y="511.59999999999997" width="34" height="16" fill="#bc8cff"/><rect x="428" y="511.59999999999997" width="34" height="16" fill="#f778ba"/><rect x="462" y="511.59999999999997" width="34" height="16" fill="#c9d1d9"/></g>
+</svg>
